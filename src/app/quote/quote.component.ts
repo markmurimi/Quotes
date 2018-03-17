@@ -9,10 +9,18 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(1, 'Happy coding'),
-    new Quote(2, 'I think angular is a bit complex'),
+    new Quote(1, 'Happy coding','Always be happy when coding'),
+    new Quote(2, 'Angular js', 'On my point of view angular is a bit complex'),
   ]
 
+  togleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  completeQuote(isComplete,index){
+    if (isComplete){
+      this.quotes.splice(index,1)
+    }
+  }
   constructor() { }
 
   ngOnInit() {

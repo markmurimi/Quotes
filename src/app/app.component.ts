@@ -7,8 +7,8 @@ import { Quote} from './quote'
 })
 export class AppComponent {
   quotes = [
-    new Quote(1, 'Happy coding'),
-    new Quote(2, 'I think angular is a bit complex'),
+    new Quote(1, 'Happy coding', 'Always be happy when coding'),
+    new Quote(2, 'Angular js', 'On my point of view angular is a bit complex'),
   ]
   }
 
