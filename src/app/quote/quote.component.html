@@ -10,7 +10,9 @@
     <app-quote-details *ngIf="quote.showDescription"[quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
   </div>
   </div><div class="container" style="padding-left:150px;padding-bottom:30px;">
-    <app-quote-form></app-quote-form>
   </div>
 <p *ngIf='quotes.length > 5 '>You have too many quotes</p>
+<div class="container">
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
 </body>
