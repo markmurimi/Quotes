@@ -13,8 +13,9 @@ export class QuoteComponent implements OnInit {
     new Quote(2, '"But man is not made for defeat. A man can be destroyed but not defeated."', 'AUTHOR:Ernest Hemingway     SUBMITED BY:Ramza Reseni',new Date(2017,6,9)),
     new Quote(3,'"When you reach the end of your rope, tie a knot in it and hang on."','AUTHOR:Franklin D. Roosevelt SUBMITED BY:Lenora Sharon',new Date(2017,1,12)),
   ]
-
-
+  addNewQuote(){
+    
+  }
   togleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
