@@ -9,7 +9,21 @@ Quotes is a web application that offers a range of quotes whereby you get to cre
 
 ---
 #### Tools and languages used to create the Quotes app are:
-* HTML
-* Bootstrap
-* CSS
-* Javascript
+* HTML.
+* Bootstrap.
+* CSS.
+* Angular.
+
+---
+
+## To set up the app you need to :
+* Open GitHub and search my user name [markmurimi](https://github.com/markmurimi)
+* Then locate the repository "Quotes" and open.
+* On the Download or Clone tab select the download option and save it on a folder of choice or simply clone the repo to your computer)
+* After this unzip the file and the entire repo will be available on your local machine.
+* Open the "index.html" file and it should automaticaly be opened in your browser.
+
+---
+Copyright and License are under [**MIT**]()
+
+©MARKKMURIMI ~ 2018
