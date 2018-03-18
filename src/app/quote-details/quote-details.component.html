@@ -1,6 +1,7 @@
 <p>
   {{quote.description}}
 </p>
+<p>{{quote.creaionDate|dateCount}} days have passed since the quote was created.</p>
 <button class="btn btn-danger"(click) = 'quoteComplete(true)'>Delete Quote</button>
 <p></p>
 <button>Upvote</button>
