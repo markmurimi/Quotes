@@ -16,7 +16,7 @@ export class DateCountPipe implements PipeTransform {
       if (dateCounter >= 1){
         return dateCounter;
       }else{
-        return 0;
+        return 120;
       }
   }
 
