@@ -11,7 +11,9 @@ export class QuoteComponent implements OnInit {
   quotes = [
     new Quote(1, '"I love you the more in that I believe you had liked me for my own sake and for nothing else."', 'AUTHOR:John Keats SUBMITED BY:Mark Murimi'),
     new Quote(2, '"But man is not made for defeat. A man can be destroyed but not defeated."', 'AUTHOR:Ernest Hemingway     SUBMITED BY:Ramza Reseni'),
+    new Quote(3,'"When you reach the end of your rope, tie a knot in it and hang on."','AUTHOR:Franklin D. Roosevelt SUBMITED BY:Lenora Sharon'),
   ]
+
 
   togleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
