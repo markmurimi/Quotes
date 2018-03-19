@@ -1,18 +1,28 @@
 <div class="container-fluid">
-  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'></form>
-    <form #quoteForm='ngForm'style="padding-right:130px;color:white;padding-bottom:30px;">
-      <div class="form-group"style="">
-        <label for="quotetext">Type in the quote.</label>
-        <textarea class="form-control" id="quotetext" [(ngModel)]="newQuote.name" name="name"rows="2" required>
-        </textarea>
-      </div>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'style="padding-right:130px;color:black;padding-bottom:30px;">
+      <!-- Name Form -->
       <div class="form-group">
-        <label for="details">Author of the quote.</label>
-        <input type="text" required class="form-control" id="details"[(ngModel)]="newQuote.name" name="name">
+        <label for="name">Author of the quote.</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"required>
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <p>Author name is required.</p>
       </div>
+      </div>
+      <!-- Description Input -->
       <div class="form-group">
-        <label for="submission">Name of the one who is submitting.</label>
-        <input type="text" required class="form-control" id="submission"[(ngModel)]="newQuote.name" name="name">
+        <label for="description">Type in the quote.</label>
+        <textarea required class="form-control" id="description"rows="2" [(ngModel)]="newQuote.description" name="description" #descripton ="ngModel" required></textarea>
+      <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+        <p>Quote is Required</p>
+      </div>
+      </div>
+      <!-- Date Input-->
+      <div class="form-group">
+        <label for="complete">Date of submission.</label>
+        <input type="date" required  id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel">
+        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+          <p> Submission Date is Required</p>
+      </div>
       </div>
       <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
       <p></p>

@@ -3,17 +3,19 @@
 <h1>QUOTES.</h1>
 <hr>
 </div>
-<div class="container"style="color:white;text-align:center;">
+<div class="container"style="color:black;text-align:center;">
   <div *ngFor='let quote of quotes;let i = index'>
-    <h5>{{quote.name}}</h5>
-    <li id="{{i}}">Created on {{quote.creationDate|date}}</li>
+    <li>{{quote.name}}</li>
+    <li id="{{i}}">Created on {{quote.completeDate|date}}</li>
     <button class="btn btn-primary"(click)='togleDetails(i)'>Details</button>
-    <app-quote-details *ngIf="quote.showDescription"[quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
   </div>
   </div><div class="container" style="padding-left:150px;padding-bottom:30px;">
   </div>
 <p *ngIf='quotes.length > 5 '>You have too many quotes</p>
 <div class="container">
-  <app-quote-form></app-quote-form>
+  <div class="row">
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
   </div>
 </body>
